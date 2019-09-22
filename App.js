@@ -6,7 +6,8 @@ import { createDrawerNavigator, DrawerNavigatorItems } from 'react-navigation-dr
 import {
   createStackNavigator,
   createAppContainer
-} from 'react-navigation';  
+} from 'react-navigation'; 
+ 
 import HomeScreen from './components/HomeScreen'
 import SettingsScreen from './components/SettingsScreen'
 
@@ -28,16 +29,12 @@ const CustomDrawerContentComponent = props => (
 );
 
 
-
-
 const AppDrawerNavigator = createDrawerNavigator({
   Home: HomeScreen,
   Settings: SettingsScreen,
 },{
   contentComponent: CustomDrawerContentComponent
 })
-
-
 
 const MyApp = createAppContainer(AppDrawerNavigator);
 
